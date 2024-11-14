@@ -20,10 +20,10 @@ def quadtree(n, vlist):
     
     half = n//2
     temp = '('
-    temp += quadtree(half,[l[:half] for l in vlist[:half]])
-    temp += quadtree(half,[l[half:] for l in vlist[:half]])
-    temp += quadtree(half,[l[:half] for l in vlist[half:]])
-    temp += quadtree(half,[l[half:] for l in vlist[half:]])
+    temp += quadtree(half,[l[:half] for l in vlist[:half]]) # 왼쪽 위
+    temp += quadtree(half,[l[half:] for l in vlist[:half]]) # 오른쪽 위
+    temp += quadtree(half,[l[:half] for l in vlist[half:]]) # 왼쪽 아래
+    temp += quadtree(half,[l[half:] for l in vlist[half:]]) # 오른쪽 아래
     temp += ')'
     
     return temp

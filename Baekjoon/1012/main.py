@@ -36,5 +36,5 @@ for i in range(T):
             if matrix[a][b] == 1:
                 BFS(a,b)
                 cnt += 1
-
+                
     print(cnt)

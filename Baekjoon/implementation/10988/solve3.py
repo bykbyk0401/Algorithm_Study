@@ -1,3 +1,5 @@
+# reversed 사용
+
 word = list(str(input()))
 
 if list(reversed(word)) == word:
